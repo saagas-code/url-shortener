@@ -16,7 +16,7 @@ const Base62Encode = (link: string) => {
 
 const UrlShortener = (originalUrl: string): any => {
     const date = new Date()
-    const value = date + originalUrl
+    const value = date + originalUrl + date
     const hash = crypto.createHash("md5").update(value).digest("hex");
 
     const sequenciaCurta = Base62Encode(hash);
