@@ -1,12 +1,20 @@
-import express from "express"
+import express from "express";
+import router from "./routes";
+import config from "./config";
+import dotenv from "dotenv";
+import { sequelize } from "./database/pgClient";
 
-const app = express()
-const port = 8819
+dotenv.config();
+const app = express();
+const port = config.port;
 
-app.get("/", (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(router);
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
-})
+app.listen(port, async () => {
+    try {
+        await sequelize.sync();
+        console.log(`Server listening on port ${port}`);
+    } catch (err: any) {}
+});
