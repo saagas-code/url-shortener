@@ -1,0 +1,38 @@
+.button {
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    background-color: var(--bg-blue);
+    padding: 21px 25px;
+    border-radius: 48px;
+    box-shadow: 10px 9px 22px 0px rgba(20, 78, 227, 0.38);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.children {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .icon {
+        display: none;
+    }
+    .children {
+        display: flex;
+    }
+    .button {
+        height: auto;
+        width: auto;
+    }
+}
+
+.button:hover {
+    opacity: .9;
+    cursor: pointer
+}
