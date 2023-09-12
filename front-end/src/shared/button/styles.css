@@ -1,3 +1,7 @@
+button {
+    border: none;
+}
+
 .button {
     color: white;
     font-size: 16px;
