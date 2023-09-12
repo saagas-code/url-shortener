@@ -20,8 +20,11 @@ const months = [
 ];
 
 const getDateLink = (date: string): getDateLinkProp => {
-    const [datee] = date.split(" ");
-    const [year, month, day] = datee.split("-").map(Number);
+    const data = new Date(date);
+
+    const year = data.getFullYear();
+    const month = data.getMonth() + 1;
+    const day = data.getDate();
 
     return {
         day,
