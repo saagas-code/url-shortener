@@ -19,6 +19,10 @@ const Link = sequelize.define("links", {
     },
     clicks: {
         type: DataTypes.INTEGER
+    },
+    status: {
+        type: DataTypes.STRING,
+        defaultValue: "active"
     }
 })
 
