@@ -1,15 +1,30 @@
-import CustomButton from "../../shared/button"
+import { useState } from "react";
+import CustomButton from "../../shared/button";
 
-const Input = () => {
+interface props {
+    onSend: (url: string) => void;
+}
+
+const Input = ({ onSend }: props) => {
+    const [inputValue, setInputVale] = useState("");
+
+    const confirm = () => {
+        onSend(inputValue);
+        setInputVale("");
+    };
+
     return (
         <div className="input-container">
             <img src="/assets/link.svg" alt="" />
-            <input type="text" placeholder="Enter the link here" />
-            <CustomButton>
-                <div className="">Shorten Now!</div>
-            </CustomButton>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputVale(e.target.value)}
+                placeholder="Enter the link here"
+            />
+            <CustomButton onClick={confirm}>Shorten Now!</CustomButton>
         </div>
-    )
-}
+    );
+};
 
-export default Input
+export default Input;

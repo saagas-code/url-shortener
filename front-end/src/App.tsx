@@ -1,17 +1,16 @@
-import Header from './components/header'
-import Main from './components/main'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Redirect from "./pages/redirect";
 
 function App() {
-
-  return (
-    <>
-      <div className="home-container">
-            <Header />
-            <Main />
-      </div>
-      
-    </>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/:link" element={<Redirect />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;
