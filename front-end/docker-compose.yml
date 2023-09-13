@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: url-shortener-frontend
+    network_mode: "host"
+
