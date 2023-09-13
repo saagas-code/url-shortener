@@ -3,9 +3,9 @@ import { Link } from "../../api/links";
 import { UpperFirstLetter } from "../../helpers/upperFirstLetter";
 
 interface Date {
-  day: string;
+  day: number;
   month: string;
-  year: string;
+  year: number;
 }
 
 interface props {
