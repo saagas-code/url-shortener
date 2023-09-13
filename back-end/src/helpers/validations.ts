@@ -1,7 +1,7 @@
-import {check} from "express-validator"
+import { check } from "express-validator";
 
 const CreateLinkDTO = [
-    check("url").notEmpty().withMessage("Field URL is required")
-]
+  check("url").notEmpty().withMessage("Field URL is required"),
+];
 
-export {CreateLinkDTO}
+export { CreateLinkDTO };

@@ -1,77 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap");
 
 * {
-    font-family: "Inter", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-black);
-    height: 100vh;
-    padding: 12px 26px;
+  background-color: var(--bg-black);
+  height: 100vh;
+  padding: 12px 26px;
 }
 
 @media (min-width: 900px) {
-    body {
-        background-image: url("../public/assets/Swirl.svg");
-        background-position: none;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        z-index: 9;
-        padding: 47px 52px;
-    }
+  body {
+    background-image: url("../public/assets/Swirl.svg");
+    background-position: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 9;
+    padding: 47px 52px;
+  }
 }
 
 .home-container {
 }
 
 @media (max-width: 900px) {
-    .home-container {
-    }
+  .home-container {
+  }
 }
 
 .big-title {
-    font-weight: 800;
-    font-style: normal;
-    line-height: 80.015px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 80.015px;
 }
 
 :root {
-    --bg-black: #0b101b;
-    --bg-grey: #181e29;
-    --bg-lite: #c9ced6;
-    --bg-gradient: #000000;
-    --bg-blue: #144ee3;
-    --bg-pink: #eb568e;
+  --bg-black: #0b101b;
+  --bg-grey: #181e29;
+  --bg-lite: #c9ced6;
+  --bg-gradient: #000000;
+  --bg-blue: #144ee3;
+  --bg-pink: #eb568e;
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 200% 50%;
-    }
-
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 .gradient {
-    background-size: 200% 100%;
-    background-image: linear-gradient(
-        90deg,
-        #144ee3 -0.02%,
-        #eb568e 18.86%,
-        #a353aa 64.49%,
-        #144ee3 100.67%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 3s linear infinite;
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    90deg,
+    #144ee3 -0.02%,
+    #eb568e 18.86%,
+    #a353aa 64.49%,
+    #144ee3 100.67%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s linear infinite;
 }
