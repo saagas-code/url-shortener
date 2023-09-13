@@ -18,5 +18,7 @@ app.listen(port, async () => {
   try {
     await sequelize.sync();
     console.log(`Server listening on port ${port}`);
-  } catch (err: any) {}
+  } catch (err: any) {
+    console.log(err)
+  }
 });
