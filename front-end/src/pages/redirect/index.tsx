@@ -23,7 +23,7 @@ const Redirect = () => {
     return <div className="">Loading</div>;
   }
 
-  return <div className="">Foi</div>;
+  return null;
 };
 
 export default Redirect;
