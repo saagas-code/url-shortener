@@ -21,7 +21,7 @@ interface getFullUrlProps {
 const api = {
   getLinks: async (): Promise<getLinksProps> => {
     try {
-      const url = "http://localhost:8819/";
+      const url = `http://localhost:${process.env.REACT_APP_API_PORT}/`;
       const response = await axios.get(url);
       return response.data;
     } catch (err) {
