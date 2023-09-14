@@ -3,6 +3,8 @@
 
 This project is a URL shortening application with both front-end and back-end components, each running in separate Docker containers managed by Docker Compose. The project is divided into two parts: the front-end, built with React and Vite, and the back-end, powered by Express and Sequelize.
 
+![alt text](./front-end/public/assets/project.png)
+
 ## Summary
 The project includes:
 
