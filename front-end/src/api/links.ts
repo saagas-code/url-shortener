@@ -1,4 +1,5 @@
 import axios from "axios";
+import config from "../config";
 
 export interface Link {
   id: string;
@@ -18,10 +19,12 @@ interface getFullUrlProps {
   result: string;
 }
 
+const backEndUrl = config.backEndUrl
+
 const api = {
   getLinks: async (): Promise<getLinksProps> => {
     try {
-      const url = `http://localhost:${process.env.REACT_APP_API_PORT}/`;
+      const url = `${backEndUrl}/`;
       const response = await axios.get(url);
       return response.data;
     } catch (err) {
@@ -31,7 +34,7 @@ const api = {
   },
   getFullUrl: async (shortener: string): Promise<getFullUrlProps> => {
     try {
-      const url = `http://localhost:8819/${shortener}`;
+      const url = `${backEndUrl}/${shortener}`;
       const response = await axios.get(url);
       return response.data;
     } catch (err) {
@@ -41,7 +44,7 @@ const api = {
   },
   shorterUrl: async (fullUrl: string): Promise<void> => {
     try {
-      const url = `http://localhost:8819/`;
+      const url = `${backEndUrl}/`;
       const response = await axios.post(url, {
         url: fullUrl,
       });
