@@ -1,6 +1,4 @@
-<center>
- <h1>URL Shortener</h1>
-</center>
+ <h1 align="center">URL Shortener</h1>
 
 
 This project is a URL shortening application with both front-end and back-end components, each running in separate Docker containers managed by Docker Compose. The project is divided into two parts: the front-end, built with React and Vite, and the back-end, powered by Express and Sequelize.
@@ -18,11 +16,14 @@ The project includes:
 
 ## How to Initialize the Project
 
-<center>
-<h2>Front-end</h2>
-</center>
+<h2 align="center">Front-end</h2>
 
 1. Navigate to the front-end folder in the project.
+
+2.  Create a .env file and input the following data:
+```bash
+REACT_APP_API_PORT=8819 ## Port of the back-end server
+```
 
 2. Run the following command to create and start the Docker container for the front-end application:
 
@@ -32,9 +33,7 @@ docker-compose up
 ```
 3. The front-end application will be available at http://localhost:5173 in your browser.
 
-<center>
-<h2>Back-end</h2>
-</center>
+<h2 align="center">Back-end</h2>
 
 1. Navigate to the back-end folder in the project.
 
@@ -55,9 +54,7 @@ docker-compose up
 ```
 4. The back-end server will be available at http://localhost:8819 in your browser.
 
-<center>
-<h2>Final</h2>
-</center>
+<h2 align="center">Final</h2>
 
 * The front-end uses port 5173.
 * The back-end uses port 8819.
