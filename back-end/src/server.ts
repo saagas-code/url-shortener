@@ -3,7 +3,7 @@ import router from "./routes";
 import config from "./config";
 import dotenv from "dotenv";
 import cors from "cors";
-import { sequelize } from "./database/pgClient";
+import { syncTables } from "./database/pgClient";
 
 dotenv.config();
 const app = express();
@@ -16,8 +16,8 @@ app.use(router);
 
 app.listen(port, async () => {
   try {
-    await sequelize.sync();
     console.log(`Server listening on port ${port}`);
+    syncTables()
   } catch (err: any) {
     console.log(err)
   }
