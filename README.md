@@ -22,7 +22,7 @@ The project includes:
 
 2.  Create a .env file and input the following data:
 ```bash
-REACT_APP_API_PORT=8819 ## Port of the back-end server
+VITE_BACKEND_PORT=8819 ## Port of the back-end server
 ```
 
 2. Run the following command to create and start the Docker container for the front-end application:
@@ -40,7 +40,6 @@ docker-compose up
 2. Create a .env file and input the following data:
 ```bash
 PORT=8819  ## Port on which your server will be opened
-POSTGRES_PORT=5432 ## Port of your PostgreSQL server.
 POSTGRES_DB=url-shortener-db ## Your database name
 POSTGRES_USER=admin ## Your database user
 POSTGRES_PASSWORD=admin ## Your database password
