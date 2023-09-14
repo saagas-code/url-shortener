@@ -3,7 +3,7 @@
 </center>
 
 
-This is a URL shortening project that includes both a front-end and a back-end application, both running in Docker containers using Docker Compose. The project is divided into two parts: front-end and back-end.
+This project is a URL shortening application with both front-end and back-end components, each running in separate Docker containers managed by Docker Compose. The project is divided into two parts: the front-end, built with React and Vite, and the back-end, powered by Express and Sequelize.
 
 ## Summary
 The project includes:
