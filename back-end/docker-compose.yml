@@ -1,7 +1,16 @@
 version: "3"
 
 services:
-  postgres:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: url-shortener-backend
+    depends_on:
+      - postgress
+    network_mode: "host"
+    
+  postgress:
     image: postgres:latest
     container_name: url-shortener-pg
     environment:
@@ -10,14 +19,5 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     expose:
       - "5432"
-    network_mode: "host"
-
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: url-shortener-backend
-    depends_on:
-      - postgres
     network_mode: "host"
 
