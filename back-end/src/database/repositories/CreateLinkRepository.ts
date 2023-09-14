@@ -1,4 +1,4 @@
-import UrlShortener from "../../helpers/UrlShortener";
+import generateShortId from "../../helpers/UrlShortener";
 import Link from "../models/Links";
 import crypto from "crypto";
 
@@ -11,7 +11,7 @@ const CreateLinkRepository = async ({ url }: props) => {
     const result = await Link.create({
       id: crypto.randomUUID(),
       url,
-      shortener: UrlShortener(url),
+      shortener: generateShortId(),
       clicks: 0,
     });
     return result;
