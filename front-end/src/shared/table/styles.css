@@ -119,6 +119,10 @@
   min-width: 65px;
 }
 
+.table-row .qr-code {
+  cursor: pointer;
+}
+
 @media (min-width: 950px) {
   .clicks {
     display: flex;
